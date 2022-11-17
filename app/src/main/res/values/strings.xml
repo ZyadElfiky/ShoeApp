@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Password</string>
+    <string name="email">E-Mail</string>
+    <string name="welcome">Welcome</string>
+    <string name="login_button">Login</string>
+    <string name="sign_up">SignUp</string>
+    <string name="Start">Start</string>
+    <string name="instructions">Instructions</string>
+    <string name="appInstructions">If an online store wants to acquire and retain customers effectively, it needs to offer the best possible customer experience. The key to doing this is by connecting with customers on all available touch points, providing a great experience each time.</string>
+    <string name="addShoe">Add Shoe</string>
+    <string name="addShoes">Add shoe</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+</resources>
