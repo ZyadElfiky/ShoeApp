@@ -26,7 +26,6 @@ class ShoeListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        setHasOptionsMenu(true)
         binding = FragmentShoeListBinding.inflate(inflater, container, false)
         viewModel =  (activity as MainActivity).viewModel
         viewModel.shoesList.observe(viewLifecycleOwner, Observer {
@@ -41,16 +40,18 @@ class ShoeListFragment : Fragment() {
         }
 
 
+        setHasOptionsMenu(true)
         return binding.root
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.shoe_menu,menu)
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.shoe_menu,menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return item.onNavDestinationSelected(view!!.findNavController())
-                || super.onOptionsItemSelected(item)
+        return NavigationUI.onNavDestinationSelected(item!!,view!!.findNavController())
+                ||super.onOptionsItemSelected(item)
     }
 
     private fun createNewView(shoe:Shoe) {
